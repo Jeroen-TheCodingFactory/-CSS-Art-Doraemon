@@ -1,0 +1,334 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: #7dd6ff;
+  display:flex;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.doraemon{
+  position: relative;
+  transform: scale(0.5);
+  animation-name: rolling;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.doraemon__blue{
+  height: 47rem;
+  width:48rem;
+  background-color: #009CE3;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 0.2rem solid black;
+}
+
+.doraemon__blue__white{
+  position: absolute;
+  top:22%;
+  left:50%;
+  background-color: white;
+  height:80%;
+  width:87%;
+  border-top-left-radius:70%;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius:90%;
+  border-bottom-right-radius: 90%;
+  transform: translateX(-50%);
+  border: 0.2rem solid black;
+
+}
+
+.doraemon__nose{
+  position: absolute;
+  top:13rem;
+  left:20.5rem;
+  background-color: #a9011a;
+  width: 7rem;
+  height:7rem;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.doraemon__nose::before{
+  position: absolute;
+  height:85%;
+  width:105%;
+  content:"";
+  background-color: #DC0122;
+  top:0;
+  left:0;
+  border-radius: 50%;
+  transform:rotate(20deg);
+}
+
+.doraemon__nose__white{
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: white;
+  height:40%;
+  width:40%;
+  border-radius: 50%;
+  top:1rem;
+  left:1rem;
+
+}
+
+.doraemon__eye{
+  position: absolute;
+  width: 13rem;
+  height:15rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 0.2rem solid black;
+  top:3%;
+  z-index: 0;
+}
+
+.doraemon__eye--left{
+  left:23.5%;
+  transform: rotate(5deg);
+}
+
+.doraemon__eye--right{
+  right:23%;
+  transform: rotate(-5deg);
+}
+
+.doraemon__eye__pupil{
+  position: absolute;
+  height:120%;
+  width:100%;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.doraemon__eye__pupil--left{
+  top:-7%;
+  left:20%;
+  transform: rotate(-5deg) scale(0.3);
+}
+
+.doraemon__eye__pupil--right{
+  top:-7%;
+  right:20%;
+  transform: rotate(5deg) scale(0.3);
+}
+
+.doraemon__eye__pupil__inner{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.doraemon__eye__pupil__inner--left{
+  transform: scale(0.3);
+  left:10%;
+}
+
+
+.doraemon__eye__pupil__inner--right{
+  transform: scale(0.3);
+  right:10%;
+}
+
+.doraemon__noseline{
+  position: absolute;
+  width: 0.2rem;
+  height: 7.5rem;
+  background-color: black;
+  top:42%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+.doraemon__muzzle{
+  height: 10rem;
+  width: 7rem;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  z-index: 2;
+}
+
+.doraemon__muzzle--left{
+  top:42%;
+  left:2%;
+  border-right: 0.2rem solid transparent;
+}
+
+.doraemon__muzzle--right{
+  top:42%;
+  right:2%;
+  border-left: 0.2rem solid transparent;
+
+}
+
+.doraemon__muzzle__fade {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  background-color: white;
+  z-index: 3;
+}
+
+.doraemon__muzzle__fade--left{
+  top:58%;
+  left:10%;
+}
+
+.doraemon__muzzle__fade--right{
+  top:58%;
+  right:10%;
+}
+
+.doraemon__mouth{
+  position: absolute;
+  width: 37rem;
+  height: 52rem;
+  top:-16%;
+  left:12%;
+  background-color: transparent;
+  border: 0.2rem solid black;
+  z-index: 4;
+  background-color: #E60012;
+  border-radius: 50%;
+  clip-path:polygon(0% 70%, 100% 70%, 100% 100%, 0% 100% );
+  overflow: hidden;
+}
+
+.doraemon__mouth__mid{
+  position: absolute;
+  top:57.5%;
+  left:50%;
+  width: 44.9rem;
+  height: 10rem;
+  transform:translateX(-50%);
+  border-radius: 50%;
+  border: 0.2rem solid transparent;
+  border-top: 0.2rem solid black;
+  z-index: 6;
+}
+
+.doraemon__mouth__oval{
+  position: absolute;
+  top:58%;
+  left:50.5%;
+  width: 33.1rem;
+  height: 4.1rem;
+  z-index: 5;
+  transform:translateX(-50%);
+  border-radius: 500%;
+  border: 0.2rem solid transparent;
+  background-color: #E60012;
+}
+
+.doraemon__tongue{
+  height: 14rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-color: #ED6D1E;
+  position: absolute;
+  z-index:6;
+  top:81%;
+}
+
+.doraemon__tongue--left{
+  left:31%;
+  transform: rotate(-70deg);
+  border: 0.2rem solid black;
+  z-index: 7;
+  border-bottom: 0.2rem solid transparent;
+}
+
+.doraemon__tongue--right{
+  right:31%;
+  transform: rotate(70deg);
+  border: 0.2rem solid black;
+  border-bottom: 0.2rem solid transparent;
+  border-bottom: 0.2rem solid transparent;
+}
+
+.doraemon__tongue--fade{
+  height: 8em;
+  width: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index:8;
+  top:86.1%;
+  left:50%;
+  transform: rotate(-77deg);
+  background-color: #ED6D1E;
+}
+
+.doraemon__whisker{
+  height: 0.2rem;
+  width: 15rem;
+  position: absolute;
+  background-color: black;
+  backface-visibility: hidden;
+}
+
+.doraemon__whisker--1{
+  top:47%;
+  left:12%;
+}
+
+.doraemon__whisker--2{
+  top:40%;
+  left:14%;
+  transform: rotate(12deg);
+  width: 14rem;
+}
+
+.doraemon__whisker--3{
+  top:54%;
+  transform: rotate(-12deg);
+  width: 14rem;
+  left: 14%;
+}
+
+.doraemon__whisker--4{
+  top:47%;
+  right:12%;
+}
+
+.doraemon__whisker--5{
+  top:40%;
+  right:14%;
+  transform: rotate(-12deg);
+  width: 14rem;
+}
+
+.doraemon__whisker--6{
+  top:54%;
+  transform: rotate(12deg);
+  width: 14rem;
+  right: 14%;
+}
+
+@keyframes rolling {
+  from{
+    transform:translateX(-30rem) scale(0) rotate(180deg);
+  }
+  to{
+    transform: translateX(0) scale(0.5) rotate(3turn);
+  }
+}
